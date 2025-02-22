@@ -1,0 +1,162 @@
+/* Apply an image background with an overlay and gradient */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(15, 19, 104, 0.8), rgba(45, 47, 71, 0.8)), url('../src/assets/charito.jpg'); /* Relative path to the image */
+  background-size: cover; /* Ensure the image covers the entire background */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+}
+
+/* Overlay to darken the background image */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(15, 19, 104, 0.6), rgba(45, 47, 71, 0.6)); /* Overlay gradient */
+  z-index: -1; /* Place the overlay behind the content */
+}
+
+/* Container styling */
+.home-container {
+  text-align: center;
+  color: white;
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px; /* Adjust as needed */
+  margin: 0 auto; /* Center the container horizontally */
+  position: relative; /* Ensure content stays above the overlay */
+  z-index: 1; /* Place the content above the overlay */
+}
+
+/* Header styling */
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: darkgoldenrod;
+}
+
+.header p {
+  font-size: 1.2rem;
+  color: rgb(184, 11, 86);
+  font: bold;
+}
+
+/* Buttons container */
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Button styling */
+.button {
+  background-color: #ff758c;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: #ff4a6e;
+}
+
+/* Pages container */
+.pages-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+/* Individual page styling */
+.page {
+  background-color: white; /* White background */
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto; /* Center each page container */
+  transition: 0.3s;
+}
+
+.page:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Darker shadow for contrast */
+}
+
+.page h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #000000; /* Dark text for better readability */
+}
+.page h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #0b0b0b; /* Dark text for better readability */
+}
+.page p {
+  font-size: 1.1rem;
+  color: #030101; /* Slightly lighter text for paragraphs */
+  margin: 0;
+  line-height: 1.6; /* Improve readability */
+}
+
+/* Custom styles for each page */
+.page-1 {
+  background-color: #eaaaaa; /* Light red */
+}
+
+.page-2 {
+  background: linear-gradient(135deg, rgba(33, 214, 181, 0.6), rgba(164, 167, 206, 0.6)); /* Light green */
+}
+
+.page-3 {
+  background-color: #ccccff; /* Light blue */
+}
+
+.page-4 {
+  background-color: #ffffcc; /* Light yellow */
+}
+
+.page-5 {
+  background-color: #ffccff; /* Light pink */
+}
+
+.page-6 {
+  background-color: #ccffff; /* Light cyan */
+}
+
+.page-7 {
+  background-color: #ffcc99; /* Light orange */
+}
+
+/* Card button styling */
+.card-button {
+  background-color: #ff758c;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 20px; /* Add space above the button */
+}
+
+.card-button:hover {
+  background-color: #ff4a6e;
+}
