@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 import Login from "./components/login";
 import Login2 from "./components/login2";
+import Dashboard from "./components/dashboard";
+import Dashboard2 from "./components/dashboard2"; // Import the Dashboard component
 
 function App() {
   return (
@@ -181,6 +183,8 @@ function App() {
         />
         <Route path="/login" element={<Login />} />
         <Route path="/login2" element={<Login2 />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboard2" element={<Dashboard2 />} /> {/* Add Dashboard route */}
       </Routes>
     </Router>
   );
