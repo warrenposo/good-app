@@ -69,7 +69,7 @@ const Dashboard = () => {
         </div>
       </div>
       <div className="main-content">
-        <h1>Welcome to CCDCVVIDarrays.viii</h1>
+        <h1>Washington CC</h1>
         <div className="content-window">
           {renderContent()}
         </div>
