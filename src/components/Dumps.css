@@ -1,6 +1,63 @@
-.Dumps {
+.dumps {
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: #280a44;
     border: 1px solid #ddd;
     border-radius: 5px;
-  }
+}
+
+.dumps h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-section label {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.filter-section select, .filter-section input {
+    padding: 8px;
+    border: 1px solid #0e0d0d;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #151414;
+    text-align: left;
+}
+
+th {
+    background-color: #181313;
+}
+
+.buy-button {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.buy-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
