@@ -1,16 +1,24 @@
 import React from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
-import "./login.css"; // Import the login-specific CSS
+import { useNavigate } from "react-router-dom";
+import "./login.css";
 
-const Login = () => {
-  const navigate = useNavigate(); // Initialize useNavigate
+const Login = ({ setIsAuthenticated }) => {
+  const navigate = useNavigate();
 
   const handleLogin = (e) => {
-    e.preventDefault(); // Prevent default form submission behavior
+    e.preventDefault();
 
     // Perform login validation here (e.g., check username and password)
-    // For now, assume login is successful
-    navigate("/dashboard"); // Redirect to the dashboard page
+    const username = e.target.username.value;
+    const password = e.target.password.value;
+
+    // For now, assume login is successful if username and password are not empty
+    if (username && password) {
+      setIsAuthenticated(true);
+      navigate("/dashboard");
+    } else {
+      alert("Invalid username or password");
+    }
   };
 
   return (

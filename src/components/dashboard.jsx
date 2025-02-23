@@ -9,10 +9,12 @@ import MyCards from "./MyCards";
 import MyDumps from "./MyDumps";
 import AddBalance from "./AddBalance";
 import WithdrawMoney from "./WithdrawMoney";
+import { useNavigate } from "react-router-dom";
 
-const Dashboard = () => {
+const Dashboard = ({ setIsAuthenticated }) => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [activeContent, setActiveContent] = useState(null);
+  const navigate = useNavigate();
 
   const toggleDrawer = () => {
     setIsDrawerOpen(!isDrawerOpen);
@@ -20,6 +22,11 @@ const Dashboard = () => {
 
   const handleMenuClick = (content) => {
     setActiveContent(content);
+  };
+
+  const handleLogout = () => {
+    setIsAuthenticated(false);
+    navigate("/login");
   };
 
   const renderContent = () => {
@@ -65,6 +72,7 @@ const Dashboard = () => {
             <li onClick={() => handleMenuClick("My Dumps")}>My Dumps</li>
             <li onClick={() => handleMenuClick("Add Balance")}>Add Balance</li>
             <li onClick={() => handleMenuClick("Withdraw Money")}>Withdraw Money</li>
+            <li onClick={handleLogout}>Logout</li>
           </ul>
         </div>
       </div>

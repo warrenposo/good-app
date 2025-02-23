@@ -1,15 +1,16 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route, Link, Navigate } from "react-router-dom";
 import "./App.css";
 import Login from "./components/login";
 import Login2 from "./components/login2";
 import Dashboard from "./components/dashboard";
-import Dashboard2 from "./components/dashboard2"; // Import the Dashboard component
+import Dashboard2 from "./components/dashboard2";
 
 function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
   return (
     <Router>
-      {/* Main app container */}
       <Routes>
         <Route
           path="/"
@@ -21,7 +22,6 @@ function App() {
                 <p1>⭐❗ Welcome to the CARDINGCLUB the Best and NEW CC CVV & Dump Shop with HIGHEST quality. ❗⭐</p1>
               </header>
 
-              {/* Add a new section for buttons */}
               <section className="buttons-container">
                 <Link to="/login" className="button">CC site</Link>
                 <Link to="/login2" className="button">Cvv shop</Link>
@@ -29,7 +29,6 @@ function App() {
                 <button className="button">Bank Logs</button>
               </section>
 
-              {/* Main content */}
               <section className="pages-container">
                 {/* Page 1 */}
                 <div className="page page-1">
@@ -181,10 +180,16 @@ function App() {
             </div>
           }
         />
-        <Route path="/login" element={<Login />} />
-        <Route path="/login2" element={<Login2 />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/dashboard2" element={<Dashboard2 />} /> {/* Add Dashboard route */}
+        <Route path="/login" element={<Login setIsAuthenticated={setIsAuthenticated} />} />
+        <Route path="/login2" element={<Login2 setIsAuthenticated={setIsAuthenticated} />} />
+        <Route
+          path="/dashboard"
+          element={isAuthenticated ? <Dashboard /> : <Navigate to="/login" />}
+        />
+        <Route
+          path="/dashboard2"
+          element={isAuthenticated ? <Dashboard2 /> : <Navigate to="/login" />}
+        />
       </Routes>
     </Router>
   );
