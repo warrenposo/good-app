@@ -1,6 +1,21 @@
-.CreditCards {
+.credit-cards {
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: #230c0c;
     border: 1px solid #ddd;
     border-radius: 5px;
-  }
+}
+
+.credit-cards table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.credit-cards th, .credit-cards td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.credit-cards th {
+    background-color: #1c1414;
+}

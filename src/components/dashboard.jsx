@@ -1,5 +1,14 @@
 import React, { useState } from "react";
 import "./Dashboard.css";
+import News from "./News";
+import CreditCards from "./CreditCards";
+import Dumps from "./Dumps";
+import CCChecker from "./CCChecker";
+import Bonus from "./Bonus";
+import MyCards from "./MyCards";
+import MyDumps from "./MyDumps";
+import AddBalance from "./AddBalance";
+import WithdrawMoney from "./WithdrawMoney";
 
 const Dashboard = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -16,23 +25,23 @@ const Dashboard = () => {
   const renderContent = () => {
     switch (activeContent) {
       case "News":
-        return <div>News Content - You can edit this section.</div>;
+        return <News />;
       case "Credit Cards":
-        return <div>Credit Cards Content - You can edit this section.</div>;
+        return <CreditCards />;
       case "Dumps":
-        return <div>Dumps Content - You can edit this section.</div>;
+        return <Dumps />;
       case "CC Checker":
-        return <div>CC Checker Content - You can edit this section.</div>;
+        return <CCChecker />;
       case "Bonus":
-        return <div>Bonus Content - You can edit this section.</div>;
+        return <Bonus />;
       case "My Cards":
-        return <div>My Cards Content - You can edit this section.</div>;
+        return <MyCards />;
       case "My Dumps":
-        return <div>My Dumps Content - You can edit this section.</div>;
+        return <MyDumps />;
       case "Add Balance":
-        return <div>Add Balance Content - You can edit this section.</div>;
+        return <AddBalance />;
       case "Withdraw Money":
-        return <div>Withdraw Money Content - You can edit this section.</div>;
+        return <WithdrawMoney />;
       default:
         return <div>Welcome! Select a menu item to view and edit content.</div>;
     }
