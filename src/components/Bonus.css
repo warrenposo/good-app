@@ -1,6 +1,39 @@
-.Bonus {
+.bonus {
     padding: 20px;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 5px;
-  }
+    text-align: center;
+}
+
+.discount-tier {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.discount-tier h3 {
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.discount-tier p {
+    margin: 0 0 15px 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.discount-tier button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.discount-tier button:hover {
+    background-color: #218838;
+}
