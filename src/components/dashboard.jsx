@@ -73,63 +73,6 @@ const Dashboard = () => {
         <div className="content-window">
           {renderContent()}
         </div>
-        <div className="user-panel">
-          <h2>User Panel</h2>
-          <div className="menu">
-            <h3>Menu</h3>
-            <div className="category">
-              <span>Category: All</span>
-              <span>Bits:</span>
-              <span>Country: All</span>
-              <span>Stats:</span>
-              <span>City: All</span>
-              <span>Zip:</span>
-              <span>Type: All</span>
-            </div>
-          </div>
-          <div className="client-cards">
-            <h3>Client cards</h3>
-            <div className="card-actions">
-              <button>GC Checker</button>
-              <button>BOXING $</button>
-              <button>My Clients</button>
-              <button>My Daming</button>
-              <button>Add Balance</button>
-              <button>Withdraw Money</button>
-            </div>
-          </div>
-        </div>
-        <div className="table-container">
-          <table>
-            <thead>
-              <tr>
-                <th>Type</th>
-                <th>Bits</th>
-                <th>Exp Date</th>
-                <th>Category</th>
-                <th>Country</th>
-                <th>Stats</th>
-                <th>City</th>
-                <th>Zip</th>
-                <th>Action/Result</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>VISA</td>
-                <td>471630</td>
-                <td>1/20203</td>
-                <td>Category Info</td>
-                <td>U.S.A</td>
-                <td>NE</td>
-                <td>Omaha</td>
-                <td>68168</td>
-                <td><button>Buy ($5.00)</button></td>
-              </tr>
-              {/* Add more rows as needed */}
-            </tbody>
-          </table>
-        </div>
       </div>
     </div>
   );

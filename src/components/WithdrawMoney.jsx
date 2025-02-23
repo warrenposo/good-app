@@ -1,11 +1,36 @@
 import React from "react";
-import "./News.css";
+import "./Withdrawmoney.css";
 
 const Withdrawmoney = () => {
   return (
-    <div className="news">
-      <h2>withdrwa balance</h2>
-      <p>This is the News section. You can edit this content.</p>
+    <div className="withdraw-container">
+      <h2 className="withdraw-title">Instant Withdraw</h2>
+
+      {/* Withdraw Table */}
+      <div className="withdraw-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Withdraw System</th>
+              <th>Value</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <input type="text" placeholder="Your Bitcoin Wallet" />
+              </td>
+              <td>
+                <input type="text" placeholder="USD" />
+              </td>
+              <td>
+                <button className="withdraw-btn">WITHDRAW</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
