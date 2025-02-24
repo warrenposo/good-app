@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./dashboard.css";  // If file is named "dashboard.css"
+import "./Dashboard.css";  // If file is named "Dashboard.css" // If file is named "dashboard.css"
 import News from "./News";
 import CreditCards from "./CreditCards";
 import Dumps from "./Dumps";
