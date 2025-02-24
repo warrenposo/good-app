@@ -1,5 +1,5 @@
 import React from "react";
-import "./Bonus.css";
+
 
 const Bonus = () => {
   return (

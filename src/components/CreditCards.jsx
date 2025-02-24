@@ -1,5 +1,5 @@
 import React from "react";
-import "./CreditCards.css";
+
 
 const CreditCards = () => {
   const cards = [

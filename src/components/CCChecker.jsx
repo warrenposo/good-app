@@ -1,5 +1,5 @@
 import React from "react";
-import "./CCChecker.css";
+
 
 const CCChecker = () => {
   return (

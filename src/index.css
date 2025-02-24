@@ -66,3 +66,907 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+
+.dashboard {
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+
+.drawer {
+  width: 250px;
+  height: 100vh;
+  background-color: #8e2121;
+  color: white;
+  transform: translateX(-250px);
+  transition: transform 0.3s ease-in-out;
+  position: fixed;
+}
+
+.drawer.open {
+  transform: translateX(0);
+}
+
+.drawer-toggle {
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  position: absolute;
+  right: -40px;
+  top: 10px;
+}
+
+.drawer-content {
+  padding: 20px;
+}
+
+.drawer-content h2 {
+  margin-bottom: 20px;
+}
+
+.drawer-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.drawer-content ul li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.drawer-content ul li:hover {
+  background-color: #070606;
+}
+
+.main-content {
+  margin-left: 0;
+  padding: 20px;
+  flex-grow: 1;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.drawer.open + .main-content {
+  margin-left: 250px;
+}
+
+.content-window {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #161313;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+h1, h2, h3 {
+  color: #c4b830;
+}
+
+.user-panel {
+  margin-bottom: 20px;
+}
+
+.menu, .client-cards {
+  margin-bottom: 15px;
+}
+
+.category {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.card-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.card-actions button {
+  padding: 10px;
+  background-color: #007bff;
+  color: rgb(15, 2, 2);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card-actions button:hover {
+  background-color: #0056b3;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #150404;
+}
+
+th {
+  background-color: #090909;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: #28a745;
+  color: rgb(17, 4, 4);
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+.dumps {
+  padding: 20px;
+  background-color: #280a44;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.dumps h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-section label {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.filter-section select, .filter-section input {
+  padding: 8px;
+  border: 1px solid #0e0d0d;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #151414;
+  text-align: left;
+}
+
+th {
+  background-color: #181313;
+}
+
+.buy-button {
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.buy-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+/* Reset styles for the login page */
+.login-page {
+  background-color: rgba(55, 22, 128, 0.7); /* Translucent background */
+  color: white; /* White text */
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Login box styling */
+.login-box {
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+  padding: 40px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.login-box h2 {
+  font-size: 2rem; /* Large heading */
+  margin-bottom: 10px;
+  color: white;
+}
+
+.login-box p {
+  font-size: 1rem; /* Medium-sized paragraph text */
+  margin-bottom: 20px;
+  color: white;
+}
+
+/* Form styling */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.form-group input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+}
+
+.form-options {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: white;
+}
+
+.form-options input {
+  margin: 0;
+}
+
+/* Login button styling */
+.login-button {
+  background-color: #ff758c; /* Pink button */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.login-button:hover {
+  background-color: #ff4a6e; /* Darker pink on hover */
+}
+
+/* Signup link styling */
+.signup-link {
+  font-size: 0.9rem;
+  margin-top: 20px;
+  color: white;
+}
+
+.signup-link a {
+  color: #ff758c; /* Pink link */
+  text-decoration: none;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+.withdraw-container {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+  background-color: #4f0b0e;
+  border: 1px solid #180303;
+  border-radius: 5px;
+}
+
+.withdraw-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.withdraw-table {
+  margin-top: 20px;
+}
+
+.withdraw-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.withdraw-table th,
+.withdraw-table td {
+  padding: 10px;
+  border: 1px solid #1b0505;
+  text-align: left;
+}
+
+.withdraw-table th {
+  background-color: #265308;
+  font-weight: bold;
+}
+
+.withdraw-table input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.withdraw-btn {
+  background-color: orange;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+
+.news {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.news h2 {
+  color: #333;
+  text-align: center;
+}
+
+.news p {
+  color: #555;
+  text-align: center;
+}
+
+.faq-section {
+  margin-top: 20px;
+}
+
+.faq-section h3 {
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.faq-item {
+  margin-bottom: 15px;
+}
+
+.faq-item h4 {
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.faq-item p {
+  color: #777;
+  margin-left: 20px;
+}
+
+.chat-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.chat-section button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.chat-section button:hover {
+  background-color: #0056b3;
+}
+
+.bitcoin-exchange {
+  margin-top: 30px;
+}
+
+.bitcoin-exchange h3 {
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.bitcoin-exchange ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.bitcoin-exchange ul li {
+  margin-bottom: 10px;
+}
+
+.bitcoin-exchange ul li a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.bitcoin-exchange ul li a:hover {
+  text-decoration: underline;
+}
+
+.bitcoin-exchange button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.bitcoin-exchange button:hover {
+  background-color: #218838;
+}
+
+.warning {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #fff3cd;
+  border: 1px solid #ffeeba;
+  border-radius: 5px;
+  color: #856404;
+}
+
+.domains, .payment-methods {
+  margin-top: 20px;
+  color: #555;
+}
+
+.payment-refill-section {
+  margin-top: 30px;
+}
+
+.payment-refill-section h3 {
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.payment-cards {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.payment-card {
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.refill-balance {
+  margin-top: 20px;
+}
+
+.refill-options {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.refill-options button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.refill-options button:hover {
+  background-color: #0056b3;
+}
+
+.bitcoin-wallet {
+  margin-top: 20px;
+}
+
+.bitcoin-wallet input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.dumps-container {
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dumps-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.updates-text {
+  color: red;
+  font-weight: bold;
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-group label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.filter-group select,
+.filter-group input {
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 100%;
+}
+
+.dumps-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.dumps-table th,
+.dumps-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.dumps-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.no-dumps {
+  text-align: center;
+  color: gray;
+  font-style: italic;
+}
+
+
+.user-panel {
+  padding: 20px;
+  background-color: #0b312d;
+  border: 1px solid #3caf7b;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.panel-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.filter-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns layout */
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-group label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.filter-group select,
+.filter-group input {
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 100%;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+  color: black;
+}
+
+.go-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.go-button:hover {
+  background-color: #0056b3;
+}
+
+.cards-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cards-table th,
+.cards-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.cards-table th {
+  background-color: #1e0707;
+  font-weight: bold;
+}
+
+.no-cards {
+  text-align: center;
+  color: gray;
+  font-style: italic;
+}
+
+/* Reset styles for the login page */
+.login-page {
+  background-color: rgba(14, 236, 47, 0); /* Translucent background */
+  color: white; /* White text */
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Login box styling */
+.login-box {
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+  padding: 40px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.login-box h2 {
+  font-size: 2rem; /* Large heading */
+  margin-bottom: 10px;
+  color: white;
+}
+
+.login-box p {
+  font-size: 1rem; /* Medium-sized paragraph text */
+  margin-bottom: 20px;
+  color: white;
+}
+
+/* Form styling */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.form-group input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+}
+
+.form-options {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: white;
+}
+
+.form-options input {
+  margin: 0;
+}
+
+/* Login button styling */
+.login-button {
+  background-color: #ff758c; /* Pink button */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.login-button:hover {
+  background-color: #ff4a6e; /* Darker pink on hover */
+}
+
+/* Signup link styling */
+.signup-link {
+  font-size: 0.9rem;
+  margin-top: 20px;
+  color: white;
+}
+
+.signup-link a {
+  color: #ff758c; /* Pink link */
+  text-decoration: none;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+.add-balance-container {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+  background-color: #455909;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.add-balance-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.min-deposit {
+  color: gray;
+}
+
+.payment-table {
+  margin-top: 20px;
+}
+
+.payment-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.payment-table th,
+.payment-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.payment-table th {
+  background-color: #440505;
+  font-weight: bold;
+}
+
+.payment-table input {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.deposit-btn {
+  background-color: green;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.btc-rate,
+.btc-info {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.bonus-title {
+  margin-top: 30px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.bonus-container {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.bonus-card {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  flex: 1;
+}
+
+.bonus-header {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.bonus-btn {
+  background-color: white;
+  color: black;
+  padding: 8px 12px;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.hot-badge {
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 5px;
+  border-radius: 3px;
+}

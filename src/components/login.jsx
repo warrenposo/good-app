@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate, Link } from "react-router-dom"; // Import Link
-import "./login.css";
+
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 const Login = ({ setIsAuthenticated }) => {

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./dashboard.css";  // Ensure the file is correctly named
 import News from "./News";
 import CreditCards from "./CreditCards";
 import Dumps from "./Dumps";
