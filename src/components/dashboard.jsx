@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import "./Dashboard.css";  // If file is named "Dashboard.css" // If file is named "dashboard.css"
+import { useNavigate } from "react-router-dom";
+import "./Dashboard.css";  // Ensure the file is correctly named
 import News from "./News";
 import CreditCards from "./CreditCards";
 import Dumps from "./Dumps";
@@ -9,7 +10,6 @@ import MyCards from "./MyCards";
 import MyDumps from "./MyDumps";
 import AddBalance from "./AddBalance";
 import WithdrawMoney from "./WithdrawMoney";
-import { useNavigate } from "react-router-dom";
 
 const Dashboard = ({ setIsAuthenticated }) => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -50,7 +50,7 @@ const Dashboard = ({ setIsAuthenticated }) => {
       case "Withdraw Money":
         return <WithdrawMoney />;
       default:
-        return <div>Welcome! .</div>;
+        return <div>Welcome!</div>;
     }
   };
 
@@ -63,24 +63,28 @@ const Dashboard = ({ setIsAuthenticated }) => {
         <div className="drawer-content">
           <h2>Menu</h2>
           <ul>
-            <li onClick={() => handleMenuClick("News")}>News</li>
-            <li onClick={() => handleMenuClick("Credit Cards")}>Credit Cards</li>
-            <li onClick={() => handleMenuClick("Dumps")}>Dumps</li>
-            <li onClick={() => handleMenuClick("CC Checker")}>CC Checker</li>
-            <li onClick={() => handleMenuClick("Bonus")}>Bonus</li>
-            <li onClick={() => handleMenuClick("My Cards")}>My Cards</li>
-            <li onClick={() => handleMenuClick("My Dumps")}>My Dumps</li>
-            <li onClick={() => handleMenuClick("Add Balance")}>Add Balance</li>
-            <li onClick={() => handleMenuClick("Withdraw Money")}>Withdraw Money</li>
+            {[
+              "News",
+              "Credit Cards",
+              "Dumps",
+              "CC Checker",
+              "Bonus",
+              "My Cards",
+              "My Dumps",
+              "Add Balance",
+              "Withdraw Money",
+            ].map((item) => (
+              <li key={item} onClick={() => handleMenuClick(item)}>
+                {item}
+              </li>
+            ))}
             <li onClick={handleLogout}>Logout</li>
           </ul>
         </div>
       </div>
       <div className="main-content">
         <h1>Washington CC</h1>
-        <div className="content-window">
-          {renderContent()}
-        </div>
+        <div className="content-window">{renderContent()}</div>
       </div>
     </div>
   );
