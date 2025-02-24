@@ -5,6 +5,7 @@ import Login from "./components/login";
 import Login2 from "./components/login2";
 import Dashboard from "./components/dashboard";
 import Dashboard2 from "./components/dashboard2";
+import SignUp from "./components/signup"; 
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -178,10 +179,22 @@ function App() {
                 </div>
               </section>
             </div>
-          }
+           }
         />
-        <Route path="/login" element={<Login setIsAuthenticated={setIsAuthenticated} />} />
-        <Route path="/login2" element={<Login2 setIsAuthenticated={setIsAuthenticated} />} />
+
+        {/* Login Route */}
+        <Route
+          path="/login"
+          element={<Login setIsAuthenticated={setIsAuthenticated} />}
+        />
+
+        {/* SignUp Route */}
+        <Route
+          path="/signup"
+          element={<SignUp setIsAuthenticated={setIsAuthenticated} />}
+        />
+
+        {/* Dashboard Routes (Protected) */}
         <Route
           path="/dashboard"
           element={isAuthenticated ? <Dashboard /> : <Navigate to="/login" />}
@@ -190,6 +203,9 @@ function App() {
           path="/dashboard2"
           element={isAuthenticated ? <Dashboard2 /> : <Navigate to="/login" />}
         />
+
+        {/* Fallback Route (Redirect to Home) */}
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>
   );

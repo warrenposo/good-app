@@ -1,6 +1,7 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom"; // Import Link
 import "./login.css";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 const Login = ({ setIsAuthenticated }) => {
   const navigate = useNavigate();
@@ -9,16 +10,25 @@ const Login = ({ setIsAuthenticated }) => {
     e.preventDefault();
 
     // Perform login validation here (e.g., check username and password)
-    const username = e.target.username.value;
+    const email = e.target.username.value;
     const password = e.target.password.value;
 
-    // For now, assume login is successful if username and password are not empty
-    if (username && password) {
-      setIsAuthenticated(true);
-      navigate("/dashboard");
-    } else {
-      alert("Invalid username or password");
-    }
+    const auth = getAuth();
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        if (!user) {
+          alert('No user found');
+        } else {
+          setIsAuthenticated(true);
+          navigate("/dashboard");
+        }
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        alert(`${errorCode}: ${errorMessage}`);
+      });
   };
 
   return (
@@ -58,7 +68,7 @@ const Login = ({ setIsAuthenticated }) => {
           </button>
         </form>
         <p className="signup-link">
-          Don't have an account yet? <a href="/signup">Create an account</a>
+          Don't have an account yet? <Link to="/signup">Create an account</Link>
         </p>
       </div>
     </div>

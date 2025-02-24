@@ -50,7 +50,7 @@ const Dashboard = ({ setIsAuthenticated }) => {
       case "Withdraw Money":
         return <WithdrawMoney />;
       default:
-        return <div>Welcome! Select a menu item to view and edit content.</div>;
+        return <div>Welcome! .</div>;
     }
   };
 
