@@ -1,5 +1,5 @@
 import React from "react";
-import "./Withdrawmoney.css";
+
 
 const Withdrawmoney = () => {
   return (
