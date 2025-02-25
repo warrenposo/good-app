@@ -19,8 +19,13 @@ const Dashboard = ({ setIsAuthenticated }) => {
     setIsDrawerOpen(!isDrawerOpen);
   };
 
+  const closeDrawer = () => {
+    setIsDrawerOpen(false);
+  };
+
   const handleMenuClick = (content) => {
     setActiveContent(content);
+    closeDrawer(); // Close the drawer after selecting a menu item
   };
 
   const handleLogout = () => {
@@ -55,10 +60,13 @@ const Dashboard = ({ setIsAuthenticated }) => {
 
   return (
     <div className="dashboard">
+      {/* Drawer Toggle Button */}
+      <button className="drawer-toggle" onClick={toggleDrawer}>
+        {isDrawerOpen ? "✕" : "☰"}
+      </button>
+
+      {/* Drawer */}
       <div className={`drawer ${isDrawerOpen ? "open" : ""}`}>
-        <button className="drawer-toggle" onClick={toggleDrawer}>
-          {isDrawerOpen ? "✕" : "☰"}
-        </button>
         <div className="drawer-content">
           <h2>Menu</h2>
           <ul>
@@ -81,6 +89,11 @@ const Dashboard = ({ setIsAuthenticated }) => {
           </ul>
         </div>
       </div>
+
+      {/* Backdrop to close the drawer */}
+      {isDrawerOpen && <div className="drawer-backdrop" onClick={closeDrawer}></div>}
+
+      {/* Main Content */}
       <div className="main-content">
         <h1>Washington CC</h1>
         <div className="content-window">{renderContent()}</div>
